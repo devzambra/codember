@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const file = fs.readFileSync('./users.txt')
+const file = fs.readFileSync(__dirname + '/users.txt')
 
 let users = file.toString().split('\n\n').map(u => u.replace(/\n/g, ' '))
 
